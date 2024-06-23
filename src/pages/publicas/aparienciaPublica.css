@@ -143,18 +143,11 @@
 .button-styleCC:hover{
     background-color: #0084B4;
 }
-
+/*
 input[type="radio"] {
     display: none;
-}
+}*/
 
-.circulo {
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    border:4px solid #CC0033;
-    margin: 10px;
-}
 
 .button-sexo {
     display: flex;
@@ -234,6 +227,7 @@ label {
     color: #990026;
     cursor: pointer;
 }
+
 
 @media only screen and (max-width: 600px){
     .estiloTitulo {
