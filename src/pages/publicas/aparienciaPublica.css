@@ -1,0 +1,257 @@
+/* Ingresar.css */
+.cabecera {
+    display: flex;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.piePagina {
+    display: flex;
+    background-color: #CC0033;
+    border-color: #CC0033;
+    height: 50px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cuerpo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.opcionalobligatoria {
+    color: #990026;
+    font-size: 24px;
+    margin: 3;
+}
+
+.nombres {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    justify-content: center;
+}
+
+.nombres .input-style1 {
+    border-radius: 10px;
+    border: 4px solid #CC0033;
+    width: 43%;
+    height: 40px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.nombres .input-style1:focus {
+    border-color: #0084B4; /* Azul cuando el input está enfocado */
+    outline: none; /* Opcional: quitar el borde de enfoque por defecto del navegador */
+}
+
+.nombres .input-style2 {
+    border-radius: 10px;
+    border: 4px solid #CC0033;
+    width: 28%;
+    height: 40px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.nombres .input-style2:focus {
+    border-color: #0084B4; /* Azul cuando el input está enfocado */
+    outline: none; /* Opcional: quitar el borde de enfoque por defecto del navegador */
+}
+
+.tituloCuerpo{
+    color: #990026;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.entradaInfo {
+    display: flex;
+    border-radius: 20px;
+    border: 4px solid #CC0033;
+    width: 600px;
+    height: 420px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    flex-direction: column;
+}
+
+.tamanio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-style {
+    border-radius: 10px;
+    border: 4px solid #CC0033;
+    width: 90%;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.input-style:focus {
+    border-color: #0084B4; /* Azul cuando el input está enfocado */
+    outline: none; /* Opcional: quitar el borde de enfoque por defecto del navegador */
+}
+
+
+.button-styleIS {
+    border-radius: 10px;
+    border: 4px solid #CC0033;
+    background-color: #CC0033;
+    color: white;
+    width: 90%;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.button-styleIS:hover{
+    background-color: #CC0033;
+    border-color: #CC0033;
+}
+
+.button-styleCC {
+    border-radius: 10px;
+    border: 4px solid #0084B4;
+    background-color: #0084B4;
+    color: white;
+    width: 90%;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.button-styleCC:hover{
+    background-color: #0084B4;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.circulo {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border:4px solid #CC0033;
+    margin: 10px;
+}
+
+.button-sexo {
+    display: flex;
+    border-radius: 10px;
+    border: 4px solid #CC0033;
+    background-color: white;
+    color: white;
+    width: 28%;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-sexo:hover{
+    background-color: white;
+    border-color: #0084B4;
+}
+
+.button-sexo:hover .circulo{
+    background-color: white;
+    border-color: #0084B4;
+}
+
+
+.buttonCC {
+    border-radius: 10px;
+    border: 4px solid #0084B4;
+    background-color: #0084B4;
+    color: white;
+    width: 400px;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.buttonCC:hover{
+    background-color: #0084B4;
+    border-color: #0084B4;
+}
+
+.estiloTitulo {
+    font-size: 100px;
+    color: #990026;
+    margin: 10px;
+    position: relative;
+}
+
+label {
+    color:#7F7F7F;
+    font-size: 18px;
+}
+
+.linea-estilo {
+    width: 90%;
+    border: 3px solid #CCCCCC;
+    margin: 10px 0;
+}
+
+
+.lineaBotonCC {
+    width: 350px;
+    border: 2px solid #0084B4;
+    margin: 10px 0;
+}
+
+.cancelar {
+    color: #0084B4;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.contrasenaOlvidadada {
+    color: #990026;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    .estiloTitulo {
+        font-size: 75px;
+        color: #990026;
+        margin: 10px;
+        position: relative;
+    }
+
+    .entradaInfo {
+        display: flex;
+        border-radius: 20px;
+        border: 4px solid #CC0033;
+        width: 500px;
+        height: 420px;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        flex-direction: column;
+    }
+}
