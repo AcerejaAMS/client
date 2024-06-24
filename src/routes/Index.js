@@ -17,30 +17,7 @@ const Routes = () => {
   const routesForAuthenticatedOnly = [
     {
       path: "/",
-      element: <ProtectedRoute token={token}/>, // Wrap the component in ProtectedRoute
-      children: [
-        {
-          path: "",
-          element: <Barra/>,
-        }
-      ]
-    },{
-      path: "/principal",
-      element: <ProtectedRoute token={token}/>, // Wrap the component in ProtectedRoute
-      children: [
-        {
-          path: "",
-          element: <Barra/>,
-        },
-        {
-          path: "/profile",
-          element: <BarraIzq/>,
-        },
-        {
-          path: "/logout",
-          element: <div>cerrao</div>,
-        },
-      ]
+      element: [<ProtectedRoute/>, <Barra/>,<BarraIzq/>]
     },
   ];
 
@@ -54,6 +31,10 @@ const Routes = () => {
       path: "/register",
       element: [<EncabezadoPublico/>,<Crear/>,<PiePublico/>],
     },
+    {
+      path: "/principal",
+      element: [<ProtectedRoute/>, <Barra/>,<BarraIzq/>]
+    }
   ];
 
   // Combine and conditionally include routes based on authentication status

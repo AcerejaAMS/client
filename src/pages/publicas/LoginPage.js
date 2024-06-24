@@ -2,14 +2,17 @@ import './aparienciaPublica.css';
 import React, { useState} from 'react';
 import Swal from 'sweetalert2'
 import { loginRequest } from '../../api/auth';
+import { useNavigate } from "react-router-dom";
 
 const Ingresar = () => {
 
     const [correo, setCorreo] = useState('');
     const [contrasena, setContrasena] = useState('');
 
+    const navigate = useNavigate();
+
     const CambioPagina_CrearCuenta = () =>{
-        window.location.href = 'http://localhost:3000/register';
+        navigate("/register",{replace: true});
     }
 
     const CambioPagina_OlvidarContrasena = () =>{
@@ -40,7 +43,7 @@ const Ingresar = () => {
         resultadoBusqueda
         .then(response => {
             if( response.data.message === "Ejecutado correctamente"){
-                window.location.href = 'http://localhost:3000/principal';
+                navigate("/principal",{replace: true});
             }else{
                 Swal.fire({
                     title: 'Error',
