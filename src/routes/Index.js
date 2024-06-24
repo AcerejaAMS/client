@@ -13,33 +13,34 @@ import BarraIzq from '../pages/privadas/BarraIzquierda.js';
 const Routes = () => {
   const { token } = useAuthe();
 
-  // Define public routes accessible to all users
-  const routesForPublic = [
-    {
-      path: "/service",
-      element: <div>Service Page</div>,
-    },
-    {
-      path: "/about-us",
-      element: <div>About Us</div>,
-    },
-  ];
-
   // Define routes accessible only to authenticated users
   const routesForAuthenticatedOnly = [
     {
       path: "/",
-      element: <ProtectedRoute />, // Wrap the component in ProtectedRoute
+      element: <ProtectedRoute token={token}/>, // Wrap the component in ProtectedRoute
       children: [
         {
           path: "",
-          element: <div>User Home Page</div>,
+          element: <Barra/>,
+        }
+      ]
+    },{
+      path: "/principal",
+      element: <ProtectedRoute token={token}/>, // Wrap the component in ProtectedRoute
+      children: [
+        {
+          path: "",
+          element: <Barra/>,
         },
         {
           path: "/profile",
-          element: <div>User Profile</div>,
-        }
-      ],
+          element: <BarraIzq/>,
+        },
+        {
+          path: "/logout",
+          element: <div>cerrao</div>,
+        },
+      ]
     },
   ];
 
@@ -57,9 +58,8 @@ const Routes = () => {
 
   // Combine and conditionally include routes based on authentication status
   const router = createBrowserRouter([
-    ...routesForPublic,
     ...(!token ? routesForNotAuthenticatedOnly : []),
-    ...routesForAuthenticatedOnly,
+    ...(token ? routesForAuthenticatedOnly : []),
   ]);
 
   // Provide the router configuration using RouterProvider
