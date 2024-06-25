@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { useAuthe } from "../context/AuthContext.js";
+import { useAuth } from "../context/AuthContext.js";
 import { ProtectedRoute } from "./RouteProtected.js";
 
 import PiePublico from '../pages/publicas/PiePaginaPublico.js';
@@ -11,7 +11,7 @@ import Barra from '../pages/privadas/BarraHerramienta.js';
 import BarraIzq from '../pages/privadas/BarraIzquierda.js';
 
 const Routes = () => {
-  const { token } = useAuthe();
+  const { token } = useAuth();
 
   // Define routes accessible only to authenticated users
   const routesForAuthenticatedOnly = [
