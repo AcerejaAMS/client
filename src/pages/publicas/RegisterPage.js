@@ -41,7 +41,7 @@ const Crear = () => {
 
     const fetchItems = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/register');
+            const response = await axios.get('http://localhost:4000/api/auth/register');
             setUsuarios(response.data);
         } catch (error) {
             console.error('Error al obtener los datos:', error);

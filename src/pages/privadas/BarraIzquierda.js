@@ -1,23 +1,27 @@
 import React from 'react';
 import './aparienciaPrivada.css';
+import { useNavigate } from 'react-router-dom';
 
 const BarraIzq = () => {
+
+    const navigate = useNavigate();
+
     const Acto = (boton) => {
         switch (boton) {
             default:
-                window.location.href = 'http://localhost:3000/perfil';
+                navigate("/perfil",{replace: true});
                 break;
             case 'PP':
-                window.location.href = 'http://localhost:3000/principal';
+                navigate("/principal",{replace: true});
                 break;
             case 'CT':
-                window.location.href = 'http://localhost:3000/comunidades';
+                navigate("/comunidades",{replace: true});
                 break;
             case 'AF':
-                window.location.href = 'http://localhost:3000/amigos';
+                navigate("/amigos",{replace: true});
                 break;
             case 'NW':
-                window.location.href = 'http://localhost:3000/noticias';
+                navigate("/noticias",{replace: true});
                 break;
         }
     };
