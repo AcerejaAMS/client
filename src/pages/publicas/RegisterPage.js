@@ -3,9 +3,12 @@ import Swal from 'sweetalert2'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { registerRequest } from '../../api/auth.js';
+import { useNavigate } from 'react-router-dom';
 
 
 const Crear = () => {
+
+    const navigate = useNavigate();
 
     const  [ usuarios,  setUsuarios ]  =  useState ([]) ;
     const  [ nombre ,  setNombre ]  =  useState ( '' ) ;
@@ -108,7 +111,7 @@ const Crear = () => {
     };
 
     const CambioPagina = () =>{
-        window.location.href = 'http://localhost:3000/';
+        navigate("/",{replace: true});
     }
 
     const crearNuevaCuenta = (

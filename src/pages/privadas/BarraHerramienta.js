@@ -1,14 +1,21 @@
 import React from 'react';
 import './aparienciaPrivada.css';
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 const Barra = () => {
+
+    const navigate = useNavigate();
+
     const Notificaciones = () =>{
         Swal.fire({
             title: 'Notificaciones',
             width: '500px',
           });
     }
+
+    const {logout} = useAuth();
 
     const Salir = () =>{
         Swal.fire({
@@ -22,7 +29,8 @@ const Barra = () => {
             width: '400px',
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = 'http://localhost:3000/';
+                logout();
+                navigate("/",{replace: true});
             }
         });
     }
