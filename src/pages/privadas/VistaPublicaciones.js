@@ -1,6 +1,7 @@
+/*
 import React from 'react';
 import './aparienciaPrivada.css';
-import { useAuth } from '../../context/AuthContext';
+import { usePublicates } from '../../context/PublicateContext';
 import { useState, useEffect} from 'react';
 
 const VistaPerfil = ({user}) => {
@@ -59,4 +60,4 @@ const VistaPerfil = ({user}) => {
 
 };
 
-export default VistaPerfil;
+export default VistaPerfil;*/

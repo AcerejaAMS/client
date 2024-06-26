@@ -4,15 +4,20 @@ import './indexApariencia.css';
 import Barra from '../pages/privadas/BarraHerramienta.js';
 import BarraIzq from '../pages/privadas/BarraIzquierda.js';
 import Publicar from '../pages/privadas/Publicar.js';
+import VistaPerfil from '../pages/privadas/Perfil.js';
 
-const Principal = () =>{
+import { useAuth } from '../context/AuthContext.js';
+
+export const Principal = () =>{
 
   const cuerpo = (
     <div>
       <Barra/>
       <div className='aapInfo'>
         <BarraIzq/>
-        <Publicar/>
+        <div className='panelDerecho'>
+          <Publicar/>
+        </div>
       </div>
     </div>
   )
@@ -20,4 +25,21 @@ const Principal = () =>{
   return(cuerpo)
 };
 
-export default Principal
+export const Perfil = () => {
+
+  const { user } = useAuth();
+
+  const perfil = (
+    <div>
+    <Barra/>
+    <div className='aapInfo'>
+      <BarraIzq/>
+      <div className='panelDerecho'>
+        <VistaPerfil user={user}/>
+        <Publicar/>
+      </div>
+    </div>
+  </div>
+  );
+  return(perfil);
+};

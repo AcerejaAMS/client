@@ -5,7 +5,7 @@ import {
   getComunitysRequest,
   getComunityRequest,
   updateComunityRequest,
-} from "../api/publicacion.js";
+} from "../api/comunity.js";
 
 const ComunityContext = createContext();
 
@@ -73,3 +73,4 @@ export function ComunityProvider({ children }) {
     </ComunityContext.Provider>
   );
 }
+
