@@ -10,7 +10,7 @@ import PiePublico from './pages/publicas/PiePaginaPublico.js';
 import EncabezadoPublico from './pages/publicas/EncabezadoPublico.js';
 import Ingresar from './pages/publicas/LoginPage.js';
 import Crear from './pages/publicas/RegisterPage.js';
-import Principal from './routes/Index.js';
+import Principal from './routes/Combina.js';
 
 const App = () => {
 

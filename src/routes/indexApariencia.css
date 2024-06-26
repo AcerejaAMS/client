@@ -1,4 +1,11 @@
-.aapInfo {
-    display: 'flex';
+body .aapInfo {
+    display: flex;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 700px){
+    .aapInfo {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
