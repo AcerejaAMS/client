@@ -8,7 +8,7 @@ header {
     align-items: center;
     padding: 10px;
   }
-  
+
   .botonesHerramientas {
     background-color:white;
     height: 50px;
@@ -191,10 +191,82 @@ header {
     background-color: #C9F1FF;
     color: #003399;
   }
+
+  .panelDerecho {
+    background-color: white;
+    padding: 10px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .formaInfo {
+    background-color: #E0E0E0; 
+    width: 85%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+  }
+  
+  .formaInput {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    text-decoration-color: black;
+    font-size: 18px;
+    height: 32px;
+    width: 95%;
+    outline: none;
+  }
+  
+  .estiloLinea {
+    width: 95%;
+    border: 3px solid white;
+    margin: 10px 0;
+  }
+  
+  .unionBotonesPublicacion {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: right;
+    margin: 0px;
+  }
+  
+  .agregados {
+    background-color: #0084B4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 25%;
+    height: 32px;
+    margin:5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .publicacion {
+    background-color: #CC0033;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 25%;
+    height: 32px;
+    margin:5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
     
   @media only screen and (max-width: 700px){
       .panelIzquierdo {
-          display: none;
+          display: flex;
+      }
+
+      .panelDerecho {
+        width: 100%;
       }
   }
   
