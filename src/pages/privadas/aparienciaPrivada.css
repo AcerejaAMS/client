@@ -261,6 +261,18 @@ header {
     color: black;
     
   }
+
+  .formaPublicacion {
+    background-color: #E0E0E0; 
+    width: 85%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   
   .estiloLinea {
     width: 95%;

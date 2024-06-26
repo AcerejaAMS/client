@@ -2,8 +2,8 @@ import { createContext, useContext, useState } from "react";
 import {
   createPublicateRequest,
   deletePublicateRequest,
-  getPublicatesRequest,
-  getPublicateRequest,
+  getPublicatePropia,
+  getPublicateAjena,
   updatePublicateRequest,
 } from "../api/publicacion.js";
 
@@ -18,8 +18,9 @@ export const usePublicates = () => {
 export function PublicateProvider({ children }) {
   const [publicates, setPublicates] = useState([]);
 
-  const getPublicates = async () => {
-    const res = await getPublicatesRequest();
+  const getPublicate = async () => {
+    const res = await getPublicatePropia();
+    console.log(res)
     setPublicates(res.data);
   };
 
@@ -41,9 +42,9 @@ export function PublicateProvider({ children }) {
     }
   };
 
-  const getPublicate = async (id) => {
+  const getPublicateA = async (id) => {
     try {
-      const res = await getPublicateRequest(id);
+      const res = await getPublicateAjena(id);
       return res.data;
     } catch (error) {
       console.error(error);
@@ -62,7 +63,7 @@ export function PublicateProvider({ children }) {
     <PublicateContext.Provider
       value={{
         publicates,
-        getPublicates,
+        getPublicateA,
         deletePublicate,
         createPublicate,
         getPublicate,
