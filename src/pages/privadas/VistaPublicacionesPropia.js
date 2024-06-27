@@ -1,22 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import './aparienciaPrivada.css';
 import { usePublicates } from '../../context/PublicateContext';
 
 const VistaPublPropia = () => {
     const { publicates , getPublicate } = usePublicates();
 
-
     useEffect(() => {
         getPublicate();
-      }, []);
+    }, [getPublicate]);
 
-
-    console.log(publicates)
+    const formatearFecha = (fecha) => {
+        const date = new Date(fecha);
+        return date.toLocaleDateString('es-ES', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        });
+    };
 
     return (
-        <div className='formaPublicacion'>
+        <div className='publicacionGlobal'>
             {publicates.map((publicacion) => (
-                <h1 key={publicacion.id}>{publicacion.informacion}</h1>
+                <div className='formaPublicacion' key={publicacion.id}>
+                    <p className='estiloAutor'>{publicacion.autor}</p>
+                    <p className='estiloAutor'>{formatearFecha(publicacion.updatedAt)}</p>
+                    <p className='estiloInformacion'>{publicacion.informacion}</p>
+                </div>
             ))}
         </div>
     );

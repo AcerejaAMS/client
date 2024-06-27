@@ -41,7 +41,7 @@ const VistaPerfil = ({user}) => {
                 <p>Carrera:</p>
                 <p>Sexo:</p>
                 <p>Fecha de union:</p>
-                <p>Fecha de nacimiento:</p>
+                <p>Fecha nacimiento:</p>
             </div>
             <div className='perfilP2'>
                 <p>{userData.nombre} {userData.apellido}</p>

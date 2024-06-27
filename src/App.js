@@ -11,6 +11,7 @@ import PiePublico from './pages/publicas/PiePaginaPublico.js';
 import EncabezadoPublico from './pages/publicas/EncabezadoPublico.js';
 import Ingresar from './pages/publicas/LoginPage.js';
 import Crear from './pages/publicas/RegisterPage.js';
+import Loading from './pages/publicas/Loading.js';
 
 import { Principal } from './routes/Combina.js';
 import { Perfil } from './routes/Combina.js';
@@ -25,6 +26,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={[<EncabezadoPublico/>, <Ingresar/>,<PiePublico />]} />
               <Route path="/register" element={[<EncabezadoPublico/>, <Crear/>,<PiePublico />]} />
+              <Route path="/loading" element={[<Loading/>]} />
               <Route element={<ProtectedRoute />}>
                 <Route path="/principal" element={<Principal/>} />
                 <Route path="/perfil" element={<Perfil/>} />

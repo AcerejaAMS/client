@@ -1,5 +1,5 @@
 import './aparienciaPublica.css';
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import Swal from 'sweetalert2'
 import { loginRequest } from '../../api/auth';
 import { useNavigate } from "react-router-dom";
@@ -38,12 +38,12 @@ const Ingresar = () => {
             contrasenia: contrasena
         }
 
-        const resultadoBusqueda=loginRequest(busqueda)
-
+        const resultadoBusqueda= loginRequest(busqueda)
+        
         resultadoBusqueda
         .then(response => {
             if( response.data.message === "Ejecutado correctamente"){
-                navigate("/principal",{replace: true});
+                navigate("/loading", {replace:true});
             }else{
                 Swal.fire({
                     title: 'Error',
