@@ -97,7 +97,12 @@ const Crear = () => {
                 confirmButtonText: 'Aceptar',
                 confirmButtonColor: '#0084B4',
                 showCancelButton: false,
-            });
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate("/principal",{replace: true});
+                }
+            }
+            );
         } else {
             Swal.fire({
                 title: 'Error',
