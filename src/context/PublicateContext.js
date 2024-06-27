@@ -42,13 +42,10 @@ export function PublicateProvider({ children }) {
     }
   };
 
-  const getPublicateA = async (id) => {
-    try {
-      const res = await getPublicateAjena(id);
-      return res.data;
-    } catch (error) {
-      console.error(error);
-    }
+  const getPublicateA = async () => {
+    const res = await getPublicateAjena();
+    setPublicates(res.data);
+    
   };
 
   const updatePublicate = async (id, publicate) => {

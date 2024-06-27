@@ -1,12 +1,8 @@
 import React, { useEffect , useState } from 'react';
 import './aparienciaPrivada.css';
 import { usePublicates } from '../../context/PublicateContext';
-import { useAuth } from '../../context/AuthContext';
-import { recuperarUsuario } from '../../api/auth';
 
 const VistaPublPropia = () => {
-
-    const [userData, setUserData]=useState(null);
     const { publicates , getPublicate } = usePublicates();
 
     useEffect(() => {

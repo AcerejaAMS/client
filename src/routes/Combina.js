@@ -6,6 +6,7 @@ import BarraIzq from '../pages/privadas/BarraIzquierda.js';
 import Publicar from '../pages/privadas/Publicar.js';
 import VistaPerfil from '../pages/privadas/Perfil.js';
 import VistaPublPropia from '../pages/privadas/VistaPublicacionesPropia.js';
+import VistaPublAjena from '../pages/privadas/VistaPublicacionesAjena.js';
 
 import { useAuth } from '../context/AuthContext.js';
 
@@ -18,6 +19,7 @@ export const Principal = () =>{
         <BarraIzq/>
         <div className='panelDerecho'>
           <Publicar/>
+          <VistaPublAjena/>
         </div>
       </div>
     </div>

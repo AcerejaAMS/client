@@ -9,4 +9,4 @@ export const updatePublicateRequest = async (publicate) =>
 
 export const deletePublicateRequest = async (id) => axios.delete(`/publicacion/${id}`);
 
-export const getPublicateAjena = async () => axios.post(`/publicacion/ajena`);
+export const getPublicateAjena = () => axios.get(`/publicacion/ajena`);
