@@ -1,4 +1,4 @@
-import React, { useEffect , useState } from 'react';
+import React, { useEffect  } from 'react';
 import './aparienciaPrivada.css';
 import { usePublicates } from '../../context/PublicateContext';
 
@@ -27,7 +27,7 @@ const VistaPublPropia = () => {
                     <p className='estiloInformacion'>{publicacion.informacion}</p>
                     <div className='reaciones'>
                         <i className="fa-solid fa-heart"> : {publicacion.me_gusta}</i>
-                        <i class="fa-solid fa-comment"> : Comentarios</i>
+                        <i class="fa-solid fa-heart-crack"> : {publicacion.no_gusta}</i>
                     </div>
                 </div>
             ))}

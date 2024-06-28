@@ -4,7 +4,8 @@ import {
   deletePublicateRequest,
   getPublicatePropia,
   getPublicateAjena,
-  updatePublicateRequest,
+  updatePublicateRequestLike,
+  updatePublicateRequestDisLike
 } from "../api/publicacion.js";
 
 const PublicateContext = createContext();
@@ -48,9 +49,17 @@ export function PublicateProvider({ children }) {
     
   };
 
-  const updatePublicate = async (id, publicate) => {
+  const updateLike = async (id, publicate) => {
     try {
-      await updatePublicateRequest(id, publicate);
+      await updatePublicateRequestLike(id, publicate);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const updateDisLike = async (id, publicate) => {
+    try {
+      await updatePublicateRequestDisLike(id, publicate);
     } catch (error) {
       console.error(error);
     }
@@ -64,7 +73,8 @@ export function PublicateProvider({ children }) {
         deletePublicate,
         createPublicate,
         getPublicate,
-        updatePublicate,
+        updateLike,
+        updateDisLike
       }}
     >
       {children}

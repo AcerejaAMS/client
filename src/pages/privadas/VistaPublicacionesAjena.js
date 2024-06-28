@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 const VistaPublAjena = () => {
     const { mirarOtroPerfil } = useAuth();
-    const { publicates , getPublicateA, updatePublicate } = usePublicates();
+    const { publicates , getPublicateA, updateLike , updateDisLike } = usePublicates();
     const [userDatos, setUserDatos]=useState(null);
 
     useEffect(() => {
@@ -48,7 +48,9 @@ const VistaPublAjena = () => {
         })
     };
 
-    const aumento = (id, publi) =>updatePublicate(id, publi);
+    const aumentoLike = (id, publi) =>updateLike(id, publi,1);
+
+    const aumentoDislike = (id, publi) =>updateDisLike(id, publi,2);
 
     return (
         <div className='publicacionGlobal'>
@@ -58,8 +60,8 @@ const VistaPublAjena = () => {
                     <p className='estiloAutor' onClick={() => mostrarDatos(publicacion.autor)}>{formatearFecha(publicacion.updatedAt)}</p>
                     <p className='estiloInformacion'>{publicacion.informacion}</p>
                     <div className='reaciones'>
-                        <i className="fa-solid fa-heart" onClick={() => aumento(publicacion)}> : {publicacion.me_gusta}</i>
-                        <i class="fa-solid fa-comment"> : Comentarios</i>
+                        <i className="fa-solid fa-heart" onClick={() => aumentoLike(publicacion)}> : {publicacion.me_gusta}</i>
+                        <i class="fa-solid fa-heart-crack" onClick={() => aumentoDislike(publicacion)}> : {publicacion.no_gusta}</i>
                     </div>
                 </div>
             ))}
