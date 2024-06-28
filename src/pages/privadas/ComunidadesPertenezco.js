@@ -5,7 +5,7 @@ import { useAuth } from '../../context/AuthContext';
 import { deleteComunityRequest } from '../../api/comunity';
 
 const GrupoComunidad = () => {
-    const { comunitys, getComunity, deleteComunity} = useComunitys();
+    const { comunitys, getComunity, updateSalir} = useComunitys();
     const { user } = useAuth();
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const GrupoComunidad = () => {
         if(comunidad.administrador === user.id){
             deleteComunityRequest(comunidad._id)
         }else{
-            console.log("hola")
+            updateSalir(comunidad)
         }
 
     }

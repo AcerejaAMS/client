@@ -4,7 +4,8 @@ import {
   deleteComunityRequest,
   getComunitysRequest,
   getComunityRequest,
-  updateComunityRequest,
+  updateComunityRequestEnt,
+  updateComunityRequestSal
 } from "../api/comunity.js";
 
 const ComunityContext = createContext();
@@ -46,9 +47,17 @@ export function ComunityProvider({ children }) {
     }
   };
 
-  const updateComunity = async (id, comunity) => {
+  const updateEntrar = async (id, comunity) => {
     try {
-      await updateComunityRequest(id, comunity);
+      await updateComunityRequestEnt(id, comunity);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const updateSalir = async (id, comunity) => {
+    try {
+      await updateComunityRequestSal(id, comunity);
     } catch (error) {
       console.error(error);
     }
@@ -62,7 +71,8 @@ export function ComunityProvider({ children }) {
         deleteComunity,
         createComunity,
         getComunity,
-        updateComunity,
+        updateEntrar,
+        updateSalir,
       }}
     >
       {children}

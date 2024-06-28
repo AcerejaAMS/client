@@ -1,15 +1,17 @@
 import React, { useEffect , useState } from 'react';
 import './aparienciaPrivada.css';
 import { useComunitys } from '../../context/ComunityContext';
-import { useAuth } from '../../context/AuthContext';
 
 const SugerenciaComunidad = () => {
-    const { comunitys, getComunitys, deleteComunity} = useComunitys();
-    const { user } = useAuth();
+    const { comunitys, getComunitys, updateEntrar} = useComunitys();
 
     useEffect(() => {
         getComunitys();
     }, [getComunitys]);
+
+    const entrarComunidad = (comunidad) =>{
+        updateEntrar(comunidad);
+    }
 
     return (
         <div className='comunidadGlobal'>
@@ -19,7 +21,7 @@ const SugerenciaComunidad = () => {
                     <p className='estiloAutorCom'>{comunidad.nombre_comunidad}</p>
                     <p className='estiloInformacionCom' >{comunidad.descripcion}</p>
                 </div>
-                <button className='botonEntrarComunidad'>Salir</button>
+                <button className='botonEntrarComunidad' onClick={()=>entrarComunidad(comunidad)}>Entrar</button>
             </div>
             ))}
         </div>
