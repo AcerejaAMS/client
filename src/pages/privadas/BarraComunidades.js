@@ -12,7 +12,7 @@ const BotonesComunidades = () => {
                 navigate("/comunidades",{replace: true});
                 break;
             case 'S':
-                navigate("/comunidades/sugerencias",{replace: true});
+                navigate("/comunidadesSugerencias",{replace: true});
                 break;
         }
     };
