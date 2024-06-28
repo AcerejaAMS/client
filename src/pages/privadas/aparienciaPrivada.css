@@ -107,6 +107,15 @@ header {
     color: #cc0033; /* Color normal */
     transition: color 0.1s ease; /* Transición suave */
   }
+
+  .fa-heart {
+
+    color: #0084B4;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 25px;
+
+  }
     
   .fa-address-book {
     color: #cc0033; /* Color normal */
@@ -297,6 +306,13 @@ header {
     font-size: 15px;
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .reaciones {
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: flex-end;
   }
   
   .estiloLinea {

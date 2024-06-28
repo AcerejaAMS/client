@@ -25,6 +25,9 @@ const VistaPublPropia = () => {
                     <p className='estiloAutor'>{publicacion.autor}</p>
                     <p className='estiloAutor'>{formatearFecha(publicacion.updatedAt)}</p>
                     <p className='estiloInformacion'>{publicacion.informacion}</p>
+                    <div className='reaciones'>
+                        <i className="fa-solid fa-heart"> : {publicacion.me_gusta}</i>
+                    </div>
                 </div>
             ))}
         </div>

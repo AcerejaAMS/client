@@ -3,7 +3,7 @@ import './aparienciaPrivada.css';
 import { usePublicates } from '../../context/PublicateContext';
 
 const VistaPublAjena = () => {
-    const { publicates , getPublicateA } = usePublicates();
+    const { publicates , getPublicateA, updatePublicate } = usePublicates();
 
     useEffect(() => {
         getPublicateA();
@@ -18,6 +18,8 @@ const VistaPublAjena = () => {
         });
     };
 
+    const aumento = (id, publi) =>updatePublicate(id, publi);
+
     return (
         <div className='publicacionGlobal'>
             {publicates.map((publicacion) => (
@@ -25,6 +27,9 @@ const VistaPublAjena = () => {
                     <p className='estiloAutor'>{publicacion.autor}</p>
                     <p className='estiloAutor'>{formatearFecha(publicacion.updatedAt)}</p>
                     <p className='estiloInformacion'>{publicacion.informacion}</p>
+                    <div className='reaciones'>
+                        <i className="fa-solid fa-heart" onClick={() => aumento(publicacion)}> : {publicacion.me_gusta}</i>
+                    </div>
                 </div>
             ))}
         </div>
