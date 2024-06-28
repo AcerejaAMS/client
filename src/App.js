@@ -30,6 +30,7 @@ const App = () => {
               <Route element={<ProtectedRoute />}>
                 <Route path="/principal" element={<Principal/>} />
                 <Route path="/perfil" element={<Perfil/>} />
+                <Route path="/perfilAjeno" element={<Perfil/>} />
               </Route>
             </Routes>
           </Router>

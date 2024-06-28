@@ -27,7 +27,7 @@ const Ingresar = () => {
             input: 'text',
             inputPlaceholder: 'Igrese su correo registrado',
             width: '400px',
-          });
+        });
     }
 
     const IntentoIngreso = (e) => {

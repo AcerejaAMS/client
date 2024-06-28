@@ -27,6 +27,7 @@ const VistaPublPropia = () => {
                     <p className='estiloInformacion'>{publicacion.informacion}</p>
                     <div className='reaciones'>
                         <i className="fa-solid fa-heart"> : {publicacion.me_gusta}</i>
+                        <i class="fa-solid fa-comment"> : Comentarios</i>
                     </div>
                 </div>
             ))}

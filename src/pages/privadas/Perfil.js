@@ -16,7 +16,7 @@ const VistaPerfil = ({user}) => {
           month: 'long',
           day: 'numeric',
         });
-      };
+    };
 
     const PerfilRecuperado= getPerfil(user);
     useEffect(()=>{

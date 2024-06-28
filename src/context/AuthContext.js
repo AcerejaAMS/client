@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { createContext, useContext, useState } from "react";
-import { loginRequest, registerRequest, verifyTokenRequest, recuperarUsuario} from "../api/auth";
+import { loginRequest, registerRequest, verifyTokenRequest, recuperarUsuario, visualizarPerfilAjeno} from "../api/auth";
 import Cookies from "js-cookie";
 
 const AuthContext = createContext();
@@ -89,6 +89,15 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const mirarOtroPerfil = (id) => {
+    try {
+      const res = visualizarPerfilAjeno(id);
+      return res;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -100,6 +109,7 @@ export const AuthProvider = ({ children }) => {
         errors,
         loading,
         getPerfil,
+        mirarOtroPerfil
       }}>
       {children}
     </AuthContext.Provider>
