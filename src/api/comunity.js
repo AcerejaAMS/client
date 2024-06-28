@@ -1,12 +1,12 @@
 import axios from "./axios";
 
-export const getComunitysRequest = async () => axios.get("/comunidad");
+export const getComunitysRequest = async () => axios.get("/comunity/sugerencia");
 
-export const createComunityRequest = async (Comunity) => axios.post("/comunidad", Comunity);
+export const createComunityRequest = async (Comunity) => axios.post("/comunity", Comunity);
 
 export const updateComunityRequest = async (Comunity) =>
-  axios.put(`/comunidad/${Comunity._id}`, Comunity);
+  axios.put(`/comunity/${Comunity._id}`, Comunity);
 
-export const deleteComunityRequest = async (id) => axios.delete(`/comunidad/${id}`);
+export const deleteComunityRequest = async (id) => axios.delete(`/comunity/${id}`);
 
-export const getComunityRequest = async (id) => axios.get(`/comunidad/${id}`);
+export const getComunityRequest = async () => axios.get(`/comunity/dentro`);

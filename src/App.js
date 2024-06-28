@@ -13,8 +13,9 @@ import Ingresar from './pages/publicas/LoginPage.js';
 import Crear from './pages/publicas/RegisterPage.js';
 import Loading from './pages/publicas/Loading.js';
 
-import { Principal } from './routes/Combina.js';
+import { Principal, SuComunidad } from './routes/Combina.js';
 import { Perfil } from './routes/Combina.js';
+import { Comunidad } from './routes/Combina.js';
 
 const App = () => {
 
@@ -30,7 +31,8 @@ const App = () => {
               <Route element={<ProtectedRoute />}>
                 <Route path="/principal" element={<Principal/>} />
                 <Route path="/perfil" element={<Perfil/>} />
-                <Route path="/perfilAjeno" element={<Perfil/>} />
+                <Route path="/comunidades" element={<Comunidad/>} />
+                <Route path="/comunidades/sugerencias" element={<SuComunidad/>} />
               </Route>
             </Routes>
           </Router>

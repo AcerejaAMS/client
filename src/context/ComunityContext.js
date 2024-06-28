@@ -23,13 +23,9 @@ export function ComunityProvider({ children }) {
     setComunitys(res.data);
   };
 
-  const deleteComunity = async (id) => {
-    try {
-      const res = await deleteComunityRequest(id);
-      if (res.status === 204) setComunitys(comunitys.filter((comunity) => comunity._id !== id));
-    } catch (error) {
-      console.log(error);
-    }
+  const getComunity = async () => {
+    const res = await getComunityRequest();
+    setComunitys(res.data);
   };
 
   const createComunity = async (comunity) => {
@@ -41,12 +37,12 @@ export function ComunityProvider({ children }) {
     }
   };
 
-  const getComunity = async (id) => {
+  const deleteComunity = async (id) => {
     try {
-      const res = await getComunityRequest(id);
-      return res.data;
+      const res = await deleteComunityRequest(id);
+      if (res.status === 204) setComunitys(comunitys.filter((comunity) => comunity._id !== id));
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   };
 

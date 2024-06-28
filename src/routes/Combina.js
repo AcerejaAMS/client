@@ -7,8 +7,12 @@ import Publicar from '../pages/privadas/Publicar.js';
 import VistaPerfil from '../pages/privadas/Perfil.js';
 import VistaPublPropia from '../pages/privadas/VistaPublicacionesPropia.js';
 import VistaPublAjena from '../pages/privadas/VistaPublicacionesAjena.js';
+import BotonesComunidades from '../pages/privadas/BarraComunidades.js';
+import CrearComunidad from '../pages/privadas/CrearComunidades.js';
+import SugerenciaComunidad from '../pages/privadas/ComunidadesSugeridas.js';
 
 import { useAuth } from '../context/AuthContext.js';
+import GrupoComunidad from '../pages/privadas/ComunidadesPertenezco.js';
 
 export const Principal = () =>{
 
@@ -46,4 +50,40 @@ export const Perfil = () => {
   </div>
   );
   return(perfil);
+};
+
+export const Comunidad = () => {
+
+  const comu= (
+    <div>
+    <Barra/>
+    <div className='aapInfo'>
+      <BarraIzq/>
+      <div className='panelDerecho'>
+        <BotonesComunidades/>
+        <CrearComunidad/>
+        <GrupoComunidad/>
+      </div>
+    </div>
+  </div>
+  );
+  return(comu);
+};
+
+
+export const SuComunidad = () => {
+
+  const comu= (
+    <div>
+    <Barra/>
+    <div className='aapInfo'>
+      <BarraIzq/>
+      <div className='panelDerecho'>
+        <BotonesComunidades/>
+        <SugerenciaComunidad/>
+      </div>
+    </div>
+  </div>
+  );
+  return(comu);
 };

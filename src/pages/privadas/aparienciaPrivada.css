@@ -92,6 +92,14 @@ header {
     padding: 20px;
     width: 25%;
   }
+
+  .panelBotones {
+    width: 85%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+  }
     
   .fa-user {
     color: #cc0033; /* Color normal */
@@ -137,15 +145,22 @@ header {
   }
   
   .contenedorOpcionesSELEC {
-    background-color: #cc0033;
-    color: white; /* Color de fondo del contenedor */
+    background-color: #E0E0E0;
+    color: #660019; /* Color de fondo del contenedor */
     border-radius: 50px;
     height: 40px;
     width: 90%;
     font-size: 18px;
     align-content: center;
-    text-align: left;
+    text-align: center;
     padding-left: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .contenedorOpcionesSELEC:hover {
+    background-color: #C9F1FF;
+    color: #003399;
   }
   
   .contenedorOpcionesRS {
@@ -242,6 +257,18 @@ header {
     font-size: 18px;
     height: 32px;
     width: 95%;
+    outline: none;
+  }
+
+  .formaInput2 {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    text-decoration-color: black;
+    font-size: 18px;
+    height: 32px;
+    width: 95%;
+    margin-top: 10px;
     outline: none;
   }
 
