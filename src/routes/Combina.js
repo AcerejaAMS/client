@@ -10,6 +10,7 @@ import VistaPublAjena from '../pages/privadas/VistaPublicacionesAjena.js';
 import BotonesComunidades from '../pages/privadas/BarraComunidades.js';
 import CrearComunidad from '../pages/privadas/CrearComunidades.js';
 import SugerenciaComunidad from '../pages/privadas/ComunidadesSugeridas.js';
+import Notice from '../pages/privadas/Noticias.js';
 
 import { useAuth } from '../context/AuthContext.js';
 import GrupoComunidad from '../pages/privadas/ComunidadesPertenezco.js';
@@ -87,3 +88,18 @@ export const SuComunidad = () => {
   );
   return(comu);
 };
+
+export const Noticias = () =>{
+  const comu =(
+    <div>
+    <Barra/>
+    <div className='aapInfo'>
+      <BarraIzq/>
+      <div className='panelDerecho'>
+        <Notice/>
+      </div>
+    </div>
+  </div>
+  );
+  return(comu);
+}

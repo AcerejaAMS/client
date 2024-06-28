@@ -16,6 +16,7 @@ import Loading from './pages/publicas/Loading.js';
 import { Principal, SuComunidad } from './routes/Combina.js';
 import { Perfil } from './routes/Combina.js';
 import { Comunidad } from './routes/Combina.js';
+import { Noticias } from './routes/Combina.js';
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
                 <Route path="/perfil" element={<Perfil/>} />
                 <Route path="/comunidades" element={<Comunidad/>} />
                 <Route path="/comunidadesSugerencias" element={<SuComunidad/>} />
+                <Route path="/noticias" element={<Noticias/>}/>
               </Route>
             </Routes>
           </Router>

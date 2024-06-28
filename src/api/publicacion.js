@@ -13,3 +13,5 @@ export const updatePublicateRequestDisLike = async (publicate) =>
 export const deletePublicateRequest = async (id) => axios.delete(`/publicacion/${id}`);
 
 export const getPublicateAjena = () => axios.get(`/publicacion/ajena`);
+
+export const getPublicateNoticia = () => axios.get(`/publicacion/noticia`);
